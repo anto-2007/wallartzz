@@ -187,7 +187,6 @@
       }
     }
 
-    /* WhatsApp Floating Button */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -229,7 +228,7 @@
   <section class="gallery" id="gallery">
     <h2>Our Gallery</h2>
     <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-        <img src="https://m.media-amazon.com/images/I/51LBVBa0rzL.jpg" alt="Art 1">
+      <img src="https://m.media-amazon.com/images/I/51LBVBa0rzL.jpg" alt="Art 1">
       <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT0MgJEfRYQ_YVEMZb3UJ9OGpAVDYC3LyVGgoTAQj8sCvmQktACJeDzao7pQ-VFCWP9YZ6h_FbgIJ25RRik4thOJz5iK5X9DzAgY035CGFpdlt0HFTuMpMG" alt="Art 2">
       <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSRRHH8o1TxFJgiV4hiOuXVCRuSTYFDh3Z_-AGHu1cgE035pjZasvq7K1kyhtMOiGZ3X79c1GNP2HMHuzc2V3B0hOCsYztrqWncwz_DHu5GxwSeXIW9l-T_" alt="Art 3">
     </div>
@@ -242,7 +241,6 @@
     <form action="https://formsubmit.co/vcantony07@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="date" name="date" required>
       <select name="service" required>
         <option value="">Select Service</option>
         <option value="Wall Painting">Wall Painting</option>
@@ -260,7 +258,6 @@
     <form onsubmit="return sendWhatsApp()">
       <input type="text" id="name" placeholder="Your Name" required>
       <input type="tel" id="phone" placeholder="Phone Number" required>
-      <input type="date" id="date" required>
       <select id="service" required>
         <option value="">Select Service</option>
         <option value="Wall Painting">Wall Painting</option>
@@ -288,7 +285,6 @@
     function sendWhatsApp() {
       const name = document.getElementById("name").value;
       const phone = document.getElementById("phone").value;
-      const date = document.getElementById("date").value;
       const service = document.getElementById("service").value;
 
       if (phone.length < 10) {
@@ -296,7 +292,7 @@
         return false;
       }
 
-      const message = `New Booking Request:%0A%0AName: ${name}%0APhone: ${phone}%0ADate: ${date}%0AService: ${service}`;
+      const message = `New Booking Request:%0A%0AName: ${name}%0APhone: ${phone}%0AService: ${service}`;
       const whatsappNumber = "919287908393";
       const link = `https://wa.me/${whatsappNumber}?text=${message}`;
 
