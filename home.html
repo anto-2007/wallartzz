@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WallArtzz - Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      color: #f5f5f5;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #111;
+      box-shadow: 0 2px 5px rgba(255, 0, 0, 0.1);
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #e50914;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #ddd;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e50914;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px;
+      background-color: #111;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #e50914;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #bbb;
+    }
+
+    .hero-text button {
+      padding: 12px 25px;
+      background-color: #e50914;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .hero-text button:hover {
+      background-color: #ff1f1f;
+    }
+
+    .hero-image img {
+      width: 500px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(255,0,0,0.2);
+    }
+
+    .gallery, .booking, .contact {
+      padding: 40px 60px;
+      background-color: #000;
+    }
+
+    .gallery h2, .booking h2, .contact h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #e50914;
+    }
+
+    .gallery img {
+      width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #e50914;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    form input, form select, form button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #444;
+      font-size: 16px;
+      background-color: #111;
+      color: white;
+    }
+
+    form input:focus, form select:focus {
+      outline: none;
+      box-shadow: 0 0 5px #e50914;
+    }
+
+    form button {
+      background-color: #e50914;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    form button:hover {
+      background-color: #ff1f1f;
+    }
+
+    form button.whatsapp {
+      background-color: #25D366;
+    }
+
+    form button.whatsapp:hover {
+      background-color: #1ebe5d;
+    }
+
+    .or {
+      text-align: center;
+      margin: 15px 0;
+      font-weight: bold;
+      color: #999;
+    }
+
+    .contact p {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #ddd;
+    }
+
+    footer {
+      background-color: #111;
+      color: #e50914;
+      text-align: center;
+      padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text, .hero-image {
+        max-width: 100%;
+      }
+
+      .hero-image img {
+        width: 90%;
+      }
+
+      .gallery img {
+        width: 90%;
+      }
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 24px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">WallArtzz</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#book">Book Now</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Welcome to WallArtzz</h1>
+      <p>Bring your walls to life with creative hand-painted art and customized decor.</p>
+      <button onclick="document.getElementById('gallery').scrollIntoView()">View Gallery</button>
+    </div>
+    <div class="hero-image">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSkVWbPHRmxjtmCxg0oWttqNEqTv10SSvwkA&s" alt="WallArtzz">
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <h2>Our Gallery</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+        <img src="https://m.media-amazon.com/images/I/51LBVBa0rzL.jpg" alt="Art 1">
+      <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT0MgJEfRYQ_YVEMZb3UJ9OGpAVDYC3LyVGgoTAQj8sCvmQktACJeDzao7pQ-VFCWP9YZ6h_FbgIJ25RRik4thOJz5iK5X9DzAgY035CGFpdlt0HFTuMpMG" alt="Art 2">
+      <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSRRHH8o1TxFJgiV4hiOuXVCRuSTYFDh3Z_-AGHu1cgE035pjZasvq7K1kyhtMOiGZ3X79c1GNP2HMHuzc2V3B0hOCsYztrqWncwz_DHu5GxwSeXIW9l-T_" alt="Art 3">
+    </div>
+  </section>
+
+  <section class="booking" id="book">
+    <h2>Book Now</h2>
+
+    <!-- EMAIL BOOKING -->
+    <form action="https://formsubmit.co/vcantony07@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="date" name="date" required>
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option value="Wall Painting">Wall Painting</option>
+        <option value="Interior Design">Interior Design</option>
+        <option value="Custom Artwork">Custom Artwork</option>
+      </select>
+      <button type="submit">Send to Email</button>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="thankyou.html">
+    </form>
+
+    <div class="or">OR</div>
+
+    <!-- WHATSAPP BOOKING -->
+    <form onsubmit="return sendWhatsApp()">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <input type="date" id="date" required>
+      <select id="service" required>
+        <option value="">Select Service</option>
+        <option value="Wall Painting">Wall Painting</option>
+        <option value="Interior Design">Interior Design</option>
+        <option value="Custom Artwork">Custom Artwork</option>
+      </select>
+      <button type="submit" class="whatsapp">Send to WhatsApp</button>
+    </form>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Email:</strong> vcantony07@gmail.com</p>
+    <p><strong>Phone:</strong> 9287908393</p>
+  </section>
+
+  <footer>
+    &copy; 2025 WallArtzz. All rights reserved.
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a class="whatsapp-float" href="https://wa.me/919287908393" target="_blank">💬</a>
+
+  <script>
+    function sendWhatsApp() {
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const date = document.getElementById("date").value;
+      const service = document.getElementById("service").value;
+
+      if (phone.length < 10) {
+        alert("Please enter a valid phone number.");
+        return false;
+      }
+
+      const message = `New Booking Request:%0A%0AName: ${name}%0APhone: ${phone}%0ADate: ${date}%0AService: ${service}`;
+      const whatsappNumber = "919287908393";
+      const link = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+      window.open(link, "_blank");
+      return false;
+    }
+  </script>
+
+</body>
+</html>
